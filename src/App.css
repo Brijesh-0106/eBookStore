@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* navbar */
+
+.navbar {
+  height: 92px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 250px;
+  height: 70px;
+  margin: 7px 100px;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  margin: 0 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.auth Button {
+  font-size: 14px;
+  margin: 0 7px;
+  color: #f14d54;
+}
+
+.auth Button:hover {
+  background-color: rgba(215, 209, 209, 0.633);
+}
+
+.auth hr {
+  height: 30px;
+  margin-top: 5px;
+}
+
+.searchbar {
+  height: 80px;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.searchbar input {
+  width: 422px;
+  height: 40px;
+  color: rgb(33, 33, 33);
+  margin: 0 5px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.searchbar Button {
+  height: 40px;
+  font-size: 16px;
+  max-width: 129px;
+  margin: 0 5px;
+}
+
+/* Footer css */
+
+footer {
+  bottom: 0;
+  background-color: rgb(234, 234, 234);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+footer .footer_div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer img {
+  width: 250px;
+  height: 70px;
+}
+
+footer p {
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.641);
+}
+
+/* registeration css */
+
+.reg_container,
+.login_container,
+.prod_page_container {
+  margin: 0 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reg_container h1,
+.login_container h1,
+.prod_page_container h1 {
+  font-size: 32px;
+  color: #414141;
+  margin: 30px 0 15px 0px;
+}
+
+.reg_container .form_info {
+  margin: 30px 0 30px 0px;
+}
+
+.reg_container span {
+  font-weight: 800;
+  font-size: 20px;
+  color: #414141;
+  margin-bottom: 15px;
+}
+
+.reg_container p {
+  font-size: 15px;
+  margin: 20px 0 20px 0px;
+}
+
+.reg_container .grid {
+  display: grid;
+  grid-template-areas:
+    "fname lname"
+    "email email";
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.reg_container .fname {
+  grid-area: fname;
+  width: 357px;
+  height: 40px;
+}
+
+.reg_container .lname {
+  grid-area: lname;
+  width: 357px;
+  height: 40px;
+}
+
+.reg_container .email {
+  grid-area: email;
+  margin-top: 20px;
+}
+
+.reg_container .pass_con {
+  margin: 20px 0 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* login page */
+
+.login_container {
+  margin-bottom: 35px;
+}
+
+.main_div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.main_div .new_customer h4,
+.main_div .reg_customer h4 {
+  font-size: 20px;
+  color: #414141;
+  margin-bottom: 20px;
+}
+
+.main_div .new_customer p,
+.main_div .reg_customer p {
+  font-size: 15px;
+  color: #838383;
+  margin: 20px 0;
+}
+
+.main_div .new_customer ul {
+  margin-left: 18px;
+}
+
+.main_div .new_customer ul li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #212121;
+}
+
+.main_div .reg_customer .login_section {
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr;
+  width: 400px;
+  gap: 40px;
+}
