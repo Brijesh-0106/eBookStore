@@ -70,7 +70,7 @@ const EditBook = () => {
   } = useFormik({
     initialValues: initialValueState,
     validationSchema: bookSchema,
-
+    enableReinitialize: true,
     onSubmit: (values) => {
       bookService
         .save(values)
@@ -271,7 +271,13 @@ const EditBook = () => {
               type="submit"
               variant="contained"
               color="success"
-              sx={{ textTransform: "capitalize" }}
+              sx={{
+                textTransform: "capitalize",
+                backgroundColor: "#80bf32",
+                "&:hover": {
+                  backgroundColor: "#339933",
+                },
+              }}
             >
               Save
             </Button>

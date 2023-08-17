@@ -66,11 +66,11 @@ const BookListing = () => {
           (a) => a.id === element.categoryId
         )?.name;
       });
-      if (category == 0) {
+      if (category === 0) {
         return bookList;
       }
       let newArr = bookList.filter((ele) => {
-        return ele.categoryId == category;
+        return ele.categoryId === category;
       });
       return newArr;
     }
