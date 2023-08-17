@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AppWrapper from "./components/global/AppWrapper";
 import Navbar from "./components/global/Navbar";
@@ -13,20 +13,23 @@ import loader from "./assets/images/loader.gif";
 
 import MainNavigation from "./components/global/MainNavigation";
 import { AuthWrapper } from "./context/auth";
+import { CartWrapper } from "./context/cart";
 const App = () => {
   return (
     <BrowserRouter>
       <AuthWrapper>
-        <div className="loader-wrapper">
-          <img src={loader} alt="loader" />
-        </div>
-        <AppWrapper>
-          <Navbar />
-          <SearchBar />
-          <MainNavigation />
-          <ToastContainer />
-          <Footer />
-        </AppWrapper>
+        <CartWrapper>
+          <div className="loader-wrapper">
+            <img src={loader} alt="loader" />
+          </div>
+          <AppWrapper>
+            <Navbar />
+            <SearchBar />
+            <MainNavigation />
+            <ToastContainer />
+            <Footer />
+          </AppWrapper>
+        </CartWrapper>
       </AuthWrapper>
     </BrowserRouter>
   );

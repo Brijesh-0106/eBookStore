@@ -24,7 +24,6 @@ const EditCategory = () => {
 
   useEffect(() => {
     if (id) getCategoryById();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const validationSchema = Yup.object().shape({

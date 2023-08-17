@@ -15,6 +15,7 @@ import Shared from "../../utils/shared";
 import { useMemo } from "react";
 
 import { useAuthContext } from "../../context/auth";
+import { useCartContext } from "../../context/cart";
 import { Chip } from "@mui/material";
 
 const linkStyle = {
@@ -22,8 +23,8 @@ const linkStyle = {
 };
 
 const Navbar = () => {
-
   const authContext = useAuthContext();
+  const cartContext = useCartContext();
 
   const items = useMemo(() => {
     return Shared.NavigationItems.filter(
@@ -100,23 +101,16 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            {/* <Link to="/book" style={linkStyle}>
-              <Button
-                variant="text"
-                color="error"
-                sx={{ textTransform: "capitalize" }}
-              >
-                Books
-              </Button>
-            </Link> */}
           </Stack>
-          <Link to="/cart" style={linkStyle}>
+          <Link to={RoutePaths.Cart} style={linkStyle}>
             <Button
               variant="outlined"
               color="error"
               startIcon={<ShoppingCartIcon style={{ color: "#c62828" }} />}
             >
-              <span style={{ color: "#c62828", marginRight: "5px" }}>0</span>
+              <span style={{ color: "#c62828", marginRight: "5px" }}>
+                {cartContext.cartData.length}
+              </span>
               Cart
             </Button>
           </Link>

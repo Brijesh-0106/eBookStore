@@ -66,11 +66,11 @@ const BookListing = () => {
           (a) => a.id === element.categoryId
         )?.name;
       });
-      if (category === 0) {
+      if (category == 0) {
         return bookList;
       }
       let newArr = bookList.filter((ele) => {
-        return ele.categoryId === category;
+        return ele.categoryId == category;
       });
       return newArr;
     }
@@ -99,7 +99,12 @@ const BookListing = () => {
 
   return (
     <Container maxWidth="lg" sx={{ paddingY: "1rem" }}>
-      <Typography variant="h3" sx={{ textAlign: "center" }}>
+      <Typography
+        variant="h4"
+        gutterBottom
+        style={{ fontWeight: 600 }}
+        textAlign="center"
+      >
         Book Listing
       </Typography>
 
@@ -163,14 +168,8 @@ const BookListing = () => {
       >
         {books.map((ele) => {
           return (
-            <Grid item sm={12} md={6} key={ele.name}>
-              <BookCard
-                name={ele.name}
-                price={ele.price}
-                category={ele.category}
-                description={ele.description}
-                img={ele.base64image}
-              />
+            <Grid item sm={12} md={6} key={`card-${ele.id}`}>
+              <BookCard book={ele} />
             </Grid>
           );
         })}

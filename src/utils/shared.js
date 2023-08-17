@@ -1,4 +1,22 @@
 import { Role, RoutePaths } from "./enum";
+import cartService from "../services/cart.service";
+
+const addToCart = async (book, id) => {
+  return cartService
+    .add({
+      userId: id,
+      bookId: book.id,
+      quantity: 1,
+    })
+    .then((res) => {
+      return { error: false, message: "Item added in cart" };
+    })
+    .catch((e) => {
+      // if (e.status === 500)
+      //   return { error: true, message: "Item already in the cart" };
+      // else return { error: true, message: "something went wrong" };
+    });
+};
 
 const messages = {
   USER_DELETE: "Are you sure you want to delete this user?",
@@ -51,5 +69,6 @@ export default {
   hasAccess,
   messages,
   LocalStorageKeys,
+  addToCart,
   NavigationItems,
 };

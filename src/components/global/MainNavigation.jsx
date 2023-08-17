@@ -10,6 +10,7 @@ import EditUser from "../../pages/EditUser";
 import Category from "../../pages/Category";
 import EditCategory from "../../pages/EditCategory";
 import Profile from "../../pages/Profile";
+import Cart from "../../pages/Cart";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuthContext } from "../../context/auth";
 
@@ -69,13 +70,18 @@ const MainNavigation = () => {
       />
       <Route
         exact
-        path={RoutePaths.Other}
-        element={authContext.user.id ? <BookListing /> : Redirect}
+        path={RoutePaths.UpdateProfile}
+        element={authContext.user.id ? <Profile /> : Redirect}
       />
       <Route
         exact
-        path={RoutePaths.UpdateProfile}
-        element={authContext.user.id ? <Profile /> : Redirect}
+        path={RoutePaths.Cart}
+        element={authContext.user.id ? <Cart /> : Redirect}
+      />
+      <Route
+        exact
+        path={RoutePaths.Other}
+        element={authContext.user.id ? <BookListing /> : Redirect}
       />
     </Routes>
   );
