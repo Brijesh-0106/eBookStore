@@ -16,7 +16,7 @@ import { AuthWrapper } from "./context/auth";
 import { CartWrapper } from "./context/cart";
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/eBookStore">
       <AuthWrapper>
         <CartWrapper>
           <div className="loader-wrapper">
