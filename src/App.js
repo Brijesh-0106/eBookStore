@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import AppWrapper from "./components/global/AppWrapper";
 import Navbar from "./components/global/Navbar";
@@ -16,7 +16,7 @@ import { AuthWrapper } from "./context/auth";
 import { CartWrapper } from "./context/cart";
 const App = () => {
   return (
-    <BrowserRouter basename="/eBookStore">
+    <BrowserRouter>
       <AuthWrapper>
         <CartWrapper>
           <div className="loader-wrapper">
