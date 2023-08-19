@@ -10,7 +10,7 @@ import "./assets/css/style.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import loader from "./assets/images/loader.gif";
-
+// perfect
 import MainNavigation from "./components/global/MainNavigation";
 import { AuthWrapper } from "./context/auth";
 import { CartWrapper } from "./context/cart";
